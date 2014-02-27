@@ -1,17 +1,17 @@
 <head>
-	 <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>w3waddress</title>
-  <!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
-<link rel="stylesheet" href="//getbootstrap.com/examples/cover/cover.css">
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>w3waddress</title>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+	<link rel="stylesheet" href="//getbootstrap.com/examples/cover/cover.css">
 
-<!-- Optional theme -->
-<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
 
-<!-- Latest compiled and minified JavaScript -->
-<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
 </head>
 
 <body>
@@ -19,35 +19,39 @@
 </body>
 
 <template name="main">
-	 <div class="site-wrapper">
 
-      <div class="site-wrapper-inner">
+<div class="site-wrapper">
+<div class="site-wrapper-inner">
+<div class="cover-container">
 
-        <div class="cover-container">
+  	<div class="masthead clearfix">
+    
+    </div>
 
-          <div class="masthead clearfix">
-            
-            </div>
+	<div class="inner cover">
 
-		<div class="inner cover">
+  		<h1 class="cover-heading">What3Words to Address</h1>
 
-  <h1 class="cover-heading">What3Words to Address</h1>
+		<p>Enter 3 words (just.like.this) or OneWord to get an address from Google's reverse geocoding service.</p>
 
-  <p>Enter 3 words (just.like.this) or OneWord to get an address from Google's reverse geocoding service.</p>
+		<div class="form-group">
+			<input class="form-control" type="text" id="string" name="string" />
+			<span class="help-block">Examples: prom.cape.pump, crosstek, W3WLondon</span>
+		</div>
 
-  <div class="form-group">
-  		<input class="form-control" type="text" id="string" name="string" />
-  		<span class="help-block">Examples: prom.cape.pump, crosstek, W3WLondon</span>
-  </div>
+	  <input class="btn btn-default" id="getAddressBtn" type="button" value="Get Address" />
+	  
+	  <h3>{{address}}</h3>
 
-  <input class="btn btn-default" id="getAddressBtn" type="button" value="Get Address" />
-  <h3>{{address}}</h3>
+	</div>
+
+	<div class="mastfoot">
+        <div class="inner">
+          <p>Built with <a href="http://www.meteor.com">meteor</a> by <a href="https://twitter.com/stevecaldwell">@stevecaldwell</a>, founder at <a href="http://www.crosstek.net">crosstek</a>.</p><p>Cover template for <a href="http://getbootstrap.com">Bootstrap</a>, by <a href="https://twitter.com/mdo">@mdo</a>.</p>
+        </div>
+    </div>
 </div>
-<div class="mastfoot">
-            <div class="inner">
-              <p>Built with <a href="http://www.meteor.com">meteor</a> by <a href="https://twitter.com/stevecaldwell">@stevecaldwell</a>, founder at <a href="http://www.crosstek.net">crosstek</a>.</p><p>Cover template for <a href="http://getbootstrap.com">Bootstrap</a>, by <a href="https://twitter.com/mdo">@mdo</a>.</p>
-            </div>
-          </div>
-      </div></div></div>
-  </div>
+</div>
+</div>
+
 </template>
