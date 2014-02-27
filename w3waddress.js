@@ -15,8 +15,8 @@ if (Meteor.isClient) {
   Template.main.events({
     'click #getAddressBtn': function () {
       Meteor.call("getAddress",$("#string").val(),function(error,address){
-        console.log(error);
-        console.log(address);
+        // console.log(error);
+        // console.log(address);
         Session.set("address",address);
       });
     }
@@ -32,7 +32,7 @@ if (Meteor.isServer) {
       Future = Npm.require('fibers/future');
       var fut = new Future();
 
-      console.log(string);
+      // console.log(string);
       var params = {
           'key':    '9IWU41N4',
           'string': string
@@ -44,7 +44,7 @@ if (Meteor.isServer) {
           fut.return(res.message);
         }
 
-        console.log("result:"+JSON.stringify(res));
+        // console.log("result:"+JSON.stringify(res));
         var result = JSON.parse(res.content);
         if (!("position" in result)) {
           fut.return("W3W not found!");
@@ -61,7 +61,7 @@ if (Meteor.isServer) {
 
           var result = JSON.parse(res.content);
           address = result.results[0].formatted_address;
-          console.log(address);
+          // console.log(address);
           fut.return(address);
       });  
       });  
